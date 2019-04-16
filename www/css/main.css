@@ -1,0 +1,384 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+*:focus {
+	outline: none;
+}
+
+.goTestLink {
+	position: relative;
+}
+.btn_goTestLink {
+	position: absolute;
+	padding: 8px;
+	display: none;
+	font-size: 12px;
+	right: 25px;
+	z-index: 9999999999;
+	opacity: 0;
+	cursor: pointer;
+		-webkit-transition:     opacity 0.25s ease-in-out;
+			-moz-transition:    opacity 0.25s ease-in-out;
+				-o-transition:  opacity 0.25s ease-in-out;
+					transition: opacity 0.25s ease-in-out;
+}
+.btn_changeLang {
+	position: relative;
+	float: right;
+	right: 15px;
+	margin-top: -25px;
+	font-size: 14px;
+	color: #6a7989;
+	cursor: pointer;
+}
+
+html, body {
+	position: fixed;
+	top: 0; 
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: #fff;
+	font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+a {
+	color: #6198ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #e63ab0;
+}
+
+hr {
+	border-color: #efefef;
+    border-width: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    max-width: 200px;
+}
+
+.container {
+	margin: 0 auto;
+	display: flex; /* establish flex container */
+	flex-direction: column; /* make main-axis vertical */
+	justify-content: center; /* align items vertically, in this case */
+	align-items: center; /* align items horizontally, in this case */
+	overflow: hidden;
+	height:100%;
+	box-shadow: -4px 2px 20px 2px grey;
+	  -webkit-transition: margin 0.25s ease-in-out;
+		 -moz-transition: margin 0.25s ease-in-out;
+		   -o-transition: margin 0.25s ease-in-out;
+			  transition: margin 0.25s ease-in-out;
+}
+
+.aboutLink {
+	position: absolute;
+	bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	left: 50%;
+	transform: translate(-50%, 0);
+	cursor: pointer;
+	color: #6a7989;
+	-webkit-transition:     bottom 0.5s ease-in-out;
+		-moz-transition:    bottom 0.5s ease-in-out;
+			-o-transition:  bottom 0.5s ease-in-out;
+				transition: bottom 0.5s ease-in-out;
+}
+
+.sayHello {
+	position: absolute;
+	bottom: -20px;
+	margin-right: auto;
+	margin-left: -105px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	cursor: pointer;
+	color: #6a7989;
+	  -webkit-transition: bottom 0.2s ease-in-out;
+		 -moz-transition: bottom 0.2s ease-in-out;
+		   -o-transition: bottom 0.2s ease-in-out;
+			  transition: bottom 0.2s ease-in-out;
+}
+
+.input {
+	position: relative;
+	z-index: 1;
+	display:block;
+	margin: 1em;
+	max-width: 400px;
+	width: calc(100% - 2em);
+	vertical-align: top;
+}
+
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: bold;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+	text-transform: lowercase;
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #6a7989;
+	font-weight: bold;
+	font-size: 70.25%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.input__label-content {
+	position: relative;
+	display: block;
+	padding: 1.6em 0;
+	width: 100%;
+}
+.input--kyo {
+	z-index: auto;
+}
+
+.input__field--kyo {
+	padding: 0.85em 1.5em;
+	width: 100%;
+	border-radius: 2em;
+	color: #535d92;
+}
+
+.input__label--kyo {
+	z-index: 0;
+	padding: 0 0 0 2em;
+	width: 100%;
+	text-align: left;
+}
+
+.input__label--kyo::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 115, 207, 0.6);
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	pointer-events: none;
+}
+
+.input__label-content--kyo {
+	padding: 0.5em 0;
+}
+
+.btn_getLink,
+.input__field--kyo:focus,
+.input__field--kyo:focus +  .input__label--kyo .input__label-content--kyo {
+	z-index: 10000;
+}
+
+.input__field--kyo:focus + .input__label--kyo {
+	color: #fff;
+}
+
+.input__field--kyo:focus + .input__label--kyo::after {
+	opacity: 1;
+}
+
+.notValid_not {
+	color: #6a7989;
+	-webkit-transition: color 0.3s;
+	-moz-transition:    color 0.3s;
+	-ms-transition:     color 0.3s;
+	-o-transition:      color 0.3s;
+	transition:         color 0.3s;
+}
+
+@keyframes grow-top {
+	from {
+		transform: scaleY(0);
+	}
+	to {
+		transform: scaleY(1);
+	}
+}
+
+.btn_getLink {
+	transform: scaleY(0);
+	transform-origin: top;
+	margin-top: 15px;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 100%;
+	color: #6a7989;
+	border-radius: 22px;
+	padding: 8px 12px 7px;
+	cursor: pointer;
+	background: #FFF;
+}
+
+.btn_getLink:hover {
+	background: 5dc390;
+}
+
+.btn_getLinkShow {
+	animation: grow-top cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.5s forwards;
+}
+
+.transitionContainer {
+	-webkit-transition:     margin 0.5s ease-in-out;
+		-moz-transition:    margin 0.5s ease-in-out;
+			-o-transition:  margin 0.5s ease-in-out;
+				transition: margin 0.5s ease-in-out;
+	margin-top: -55px;
+}
+
+.transitionSayHello {
+	-webkit-transition:     bottom 0.5s ease-in-out;
+		-moz-transition:    bottom 0.5s ease-in-out;
+			-o-transition:  bottom 0.5s ease-in-out;
+				transition: bottom 0.5s ease-in-out;
+	bottom: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+	.sayHello {
+		display: none;
+	}
+	.btn_goTestLink {
+		padding: 10px;
+	}
+}
+
+.Logo {
+	opacity: 0;
+	animation: fade-in-right ease 0.4s forwards;
+	animation-delay: 0.3s;
+	text-align: center;
+}
+
+.about {
+	opacity: 0;
+	animation: fade-in-right ease 0.4s forwards;
+	animation-delay: 0.5s;
+	margin-left: 7px;
+}
+
+.credits{
+	opacity: 0;
+	animation: fade-in-top ease 0.5s forwards;
+	animation-delay: 0.8s;
+	margin-left: 7px;
+}
+
+.containerFadeOutLeft {
+	animation: fade-out-right ease-in-out 0.7s forwards;
+}
+
+.containerFadeOutRight {
+	animation: fade-out-left ease-in-out 0.7s forwards;
+}
+
+.rootLink {
+	opacity: 0;
+	animation: fade-in-top ease 0.5s forwards;
+	animation-delay: 1s;
+	margin-left: 7px;
+	color: #0073CF;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.featuresLink {
+	opacity: 0;
+	animation: fade-in-top ease 0.5s forwards;
+	animation-delay: 1s;
+	margin-left: 7px;
+	color: #0073CF;
+	cursor: pointer;
+	float: right;
+	right: 0;
+	display: inline-block;
+}
+
+.btn_changeLang {
+	position: absolute;
+	font-size: 14px;
+	top: -15px;
+	color: #0073CF;
+	cursor: pointer;
+}
+																										   
+@keyframes fade-in-right {
+  from {
+	opacity: 0;
+	transform: translateX(-15px);
+  }
+  to {
+	opacity: 1;
+	transform: translateX(0);
+  }
+}
+@keyframes fade-in-top {
+  from {
+	opacity: 0;
+	transform: translateY(-25px);
+  }
+  to {
+	opacity: 1;
+	transform: translateY(0);
+  }
+}
+@keyframes fade-out-right {
+  from {
+	opacity: 1;
+	transform: translateX(0);
+  }
+  to {
+	opacity: 0;
+	transform: translateX(-130%);
+  }
+}
+@keyframes fade-out-left {
+  from {
+	opacity: 1;
+	transform: translateX(0);
+  }
+  to {
+	opacity: 0;
+	transform: translateX(130%);
+  }
+}
+@media only screen and (max-width: 400px) {
+	.about {
+		text-align: center;
+	}
+}
