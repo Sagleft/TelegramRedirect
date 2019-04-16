@@ -1,2 +1,2 @@
 <?php
-	define("RES_VERSION", "1.0.10");
+	define("RES_VERSION", "1.0.16");

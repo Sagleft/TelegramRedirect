@@ -287,7 +287,7 @@ let deferredPrompt;
     }
         
     function goTestLink() {
-        window.location.assign(document.getElementsByClassName("getinput")[0].value.slice(7));
+        window.location.assign(document.getElementsByClassName("getinput")[0].value.slice(10));
         document.getElementsByClassName("aboutLink")[0].style.display = "none";
     }
         
