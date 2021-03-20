@@ -3,9 +3,9 @@
 **When t.me/ doesn't work - mfc.click/ works**
 
 ## About
-English - [mfc.click/aboutENG](https://tgo.to/about?lang=eng)
+English - [mfc.click/aboutENG](https://mfc.click/about?lang=eng)
 
-Русский - [mfc.click/aboutRU](https://tgo.to/about?lang=ru)
+Русский - [mfc.click/aboutRU](https://mfc.click/about?lang=ru)
 
 ## Requirements
 * PHP >=5.6;
